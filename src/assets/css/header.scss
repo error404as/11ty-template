@@ -1,0 +1,36 @@
+.header {
+    margin-bottom: 30px;
+    background: rgba(#000, .1);
+    
+    > .container {
+        display: flex; align-items: center;
+        min-height: 50px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: toRem(30);
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
+.header-logo {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    margin-right: 30px;
+    border-radius: 50%;
+    background: url(../images/logo.png) 50% / cover no-repeat;
+    color: rgba(#fff, 0);
+    transition: opacity .3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+@include Tablet {
+    .header > .container {
+        padding: 0 20px;
+    }
+    .header-logo {
+        margin-right: 10px;
+    }
+}

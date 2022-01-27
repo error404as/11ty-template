@@ -1,0 +1,9 @@
+{
+  "url": "http://example.com",
+  "en": {
+    "description": "Site meta description"
+  },
+  "ru": {
+    "description": "Описание страницы в мета"
+  }
+}

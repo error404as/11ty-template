@@ -1,0 +1,40 @@
+.footer {
+    padding: 50px 0 20px;
+}
+.footer-info {
+    padding: 20px 0;
+    font-size: toRem(14);
+    color: #888;
+
+    a { margin-right: 30px; }
+}
+.c-to-top {
+    display: none;
+    position: relative;
+    margin: auto;
+    background: none;
+    border: 0;
+    font-size: 20px;
+    color: $color-text;
+
+    &.c-to-top--active { display: block; }
+
+    &::before {
+        content: '';
+        position: absolute; top: -50px; left: 50%;
+        width: 80px; height: 80px;
+        margin-left: -40px;
+        border-top: 1px solid #888;
+        border-left: 1px solid #888;
+        transform: rotate(45deg);
+    }
+    &::after {
+        content: '';
+        position: absolute; top: -47px; left: 50%;
+        width: 60px; height: 60px;
+        margin-left: -30px;
+        border-top: 1px solid #888;
+        border-left: 1px solid #888;
+        transform: rotate(45deg);
+    }
+}

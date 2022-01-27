@@ -1,0 +1,46 @@
+
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.main {
+    flex-grow: 1;
+    padding-bottom: 30px;
+}
+
+.u-mobile-only { display: none; }
+@include Mobile {
+    .u-mobile-only { display: block; }
+}
+
+.u-hidden {
+    display: none !important;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include Mobile {
+        padding: 0 20px;
+    }
+}
+
+.btn-inline {
+    display: inline-block;
+    background: none;
+    border: 0;
+    font: inherit;
+    color: inherit;
+}
+
+.c-sitemap-list {
+    li {
+        margin-bottom: 10px;
+    }
+}
+.c-sitemap-url {
+    font-size: 0.8em;
+}
