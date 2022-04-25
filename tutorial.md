@@ -753,3 +753,4 @@ eleventyConfig.setUseGitIgnore(false);
 
 I hope you’ve found this whirlwind tutorial helpful for getting started with Eleventy and common developer tooling. I sure wish I had this guide a while ago!
 
+And if you’d like to see the code in one place, I have it hosted as an Eleventy starter kit called [Elf](https://github.com/stowball/elf).

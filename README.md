@@ -10,8 +10,7 @@
 ## Running and serving a dev build
 
 ```sh
-npm run server
-npm run build
+npm run dev
 ```
 
 Browse to [http://localhost:8080](http://localhost:8080).
