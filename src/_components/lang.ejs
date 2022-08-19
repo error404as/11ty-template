@@ -1,6 +1,18 @@
 <div class="c-lang">
     <button class="c-lang__val" type="button"><%= locale %></button>
     <div class="c-lang__options">
-        <a href="/<%= locale === 'en' ? 'ru' : 'en' %>"><%= locale === 'en' ? 'ru' : 'en' %></a>
+        <%
+        var langs = Object.keys(lang);
+        %>
+        <ul class="c-lang">
+        <% langs.forEach((lang) => { 
+            if(lang !== locale) {
+            %>
+            <a href="/<%= lang %>"><%= lang %></a>
+            <%
+            }
+        }); %>
+        </ul>
     </div>
 </div>
+

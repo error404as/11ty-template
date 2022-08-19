@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const currentLang = document.querySelector('html').getAttribute('lang');
+    if (currentLang) {
+        window.localStorage.setItem('locale', currentLang);
+    }
+
     const langSwitch = document.querySelector('.c-lang');
     if(langSwitch){
         langSwitch.addEventListener('click', function(e){

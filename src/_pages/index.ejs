@@ -1,17 +1,36 @@
 ---
 layout: default.ejs
-title: Учимся разработке в Roblox
+title: 11ty based site en/ru
 ---
 <script>
-var locale = 'en';
-if(window.navigator && window.navigator.languages && window.navigator.languages[0] && window.navigator.languages[0].indexOf('ru') === 0) {
-    locale = 'ru';
+let locale = 'en';
+const langs = <%- JSON.stringify(Object.keys(lang)) %>;
+/*
+When user comes first time: detect browser language preferences.
+If preferred lang is found in available translations - choose, else - use default lang.
+When user manually switches language: save new value in localStorage and will be used on next visit.
+*/
+try {
+    const savedLocale = window.localStorage.getItem('locale');
+
+    if (savedLocale && langs.indexOf(savedLocale) !== -1) {
+        locale = savedLocale;
+    } else {
+        const browserLocale = window.navigator && window.navigator.languages && window.navigator.languages[0].substring(0, 2);
+
+        if (browserLocale && langs.indexOf(browserLocale) !== -1) {
+            locale = browserLocale;
+        }
+    }
+    window.localStorage.setItem('locale', locale);
+} catch (err) {
+    console.error(err);
 }
 window.location.replace('/'+locale);
 </script>
 
 <div class="container">
-    <h1>Эту страницу никто не должен увидеть!</h1>
+    <h1>Page for redirecting to locales only.</h1>
     
     <div class="container">
         <ul class="c-sitemap-list">
