@@ -12,13 +12,13 @@ menu, details, summary, figure, figcaption { display: block; }
 
 html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 100%; }
 html, body { height: 100%; }
-body { font: toRem(16)/1.5 Arial, Helvetica, sans-serif; letter-spacing: .01em; color: $color-text; background: $color-page-bg; }
+body { font: 16px/1.5 Arial, Helvetica, sans-serif; letter-spacing: .01em; color: $color-text; background: $color-page-bg; }
 a { color: inherit; text-decoration: underline; cursor: pointer; }
 a:hover { text-decoration: none; }
-h1 { font-size: toRem(56); margin-bottom: 50px; }
-h2 { font-size: toRem(40); }
-h3 { font-size: toRem(26); font-weight: normal; }
-h4 { font-size: toRem(16); }
+h1 { font-size: 56px; margin-bottom: 50px; }
+h2 { font-size: 40px; }
+h3 { font-size: 26px; font-weight: normal; }
+h4 { font-size: 16px; }
 h1, h2, h3 { font-family: Times, Times New Roman, serif; letter-spacing: 1px; }
 h1, h2, h3, h4 { line-height: 1; }
 li { margin-left: 25px; }

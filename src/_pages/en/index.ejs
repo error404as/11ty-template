@@ -4,7 +4,12 @@ title: Home page
 ---
 
 <div class="container">
-    <h1>EN home page</h1>
+    <h1>EN  1 home page</h1>
     
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam inventore illum, perspiciatis explicabo dicta nemo odit saepe nesciunt nam tempore nihil veritatis quisquam eos, eius suscipit distinctio voluptate tempora in.</p>
+
+    <ul>
+        <li><a href="<%= fn11ty.locale_url('/', page.lang) %>">Home page</a></li>
+        <li><a href="<%= fn11ty.locale_url('/about', page.lang) %>">About page</a></li>
+    </ul>
 </div>

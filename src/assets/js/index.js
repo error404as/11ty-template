@@ -23,10 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 langSwitch.classList.toggle('c-lang--opened');
             }
         });
-        [].forEach.call(langSwitch.querySelectorAll('.c-lang__options a'), link => {
-            const curr = link.getAttribute('href');
-            link.setAttribute('href', curr.substring(0,3) + window.location.pathname.substring(3));
-        });
     }
 
     const extLinks = document.querySelectorAll("a");

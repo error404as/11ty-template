@@ -1,0 +1,25 @@
+<% if (locale) { %>
+<div class="c-lang">
+    <button class="c-lang__val" type="button"><%= page.lang %></button>
+    <div class="c-lang__options">
+        <ul class="c-lang">
+        <%
+        var langs = Object.keys(lang).filter(el => el !== page.lang);
+        var links = fn11ty.locale_links(page.url); // if you don't have page in some lang, it won't be in this list
+        %>
+        <%
+        langs.forEach((lang) => {
+            var link = links.find(el => el.lang === lang);
+            var langUrl = link ? link.url : '/'+lang;
+        %>
+            <li><a href="<%= langUrl %>"><%= lang %></a></li>
+        <%
+        });
+        %>
+        </ul>
+    </div>
+</div>
+<% } %>
+
+
+

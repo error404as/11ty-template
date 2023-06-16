@@ -2,12 +2,12 @@
 date: Last Modified
 ---
 <!DOCTYPE html>
-<html lang="<%= locale %>">
+<html lang="<%= page.lang %>">
 <head>
 <%
-site[locale] = site[locale] || {};
-lang[locale] = lang[locale] || {};
-var pageDescription = locals.description || site[locale].description;
+site[page.lang] = site[page.lang] || {};
+lang[page.lang] = lang[page.lang] || {};
+var pageDescription = locals.description || site[page.lang].description;
 %>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,6 +17,7 @@ var pageDescription = locals.description || site[locale].description;
 <%- include('/altlang') %>
 <link rel="stylesheet" href="/assets/main.css?<%- cacheBust.mainCss %>" />
 <link rel="icon" type="image/png" href="/images/logo.png" />
+
 </head>
 <body>
 

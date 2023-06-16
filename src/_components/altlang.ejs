@@ -1,8 +1,7 @@
 <%
-var langs = Object.keys(lang).filter(el => el !== locale);
-var pattern = '^(\/' + locale + ')';
-var reg = new RegExp(pattern, '');
+fn11ty.locale_links(page.url).forEach((link) => {
 %>
-<% langs.forEach((lang) => { %>
-<link href="/<%= page.url.replace(reg, lang) %>" rel="alternate" hreflang="<%= lang %>">
-<% }); %>
+  <link href="<%= site.url + link.url %>" rel="alternate" hreflang="<%= link.lang %>">
+<%
+});
+%>
